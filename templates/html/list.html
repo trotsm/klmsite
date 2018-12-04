@@ -1,0 +1,15 @@
+{% extends "html/wrepper.html" %}
+
+{% block content %}
+    {% load static %}
+    <div class="masonry">
+        {% for post in object_list %}
+            <div class="imagebox item">
+
+            <a href="/list/{{ post.id }}" class="imagebox-desc"><h3>{{ post.title }}</h3></a>
+            <a href="/list/{{ post.id }}"><img src="{{ post.image.url }}" class="category-banner img-fluid"></a>
+</div>
+
+        {% endfor %}
+    </div>
+    {% endblock %}

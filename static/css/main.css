@@ -1,0 +1,152 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.header {
+    height: 75px;
+    background-color: #343434;
+    padding: 10px 0;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.logo {
+
+    display: block;
+    margin: 0 auto;
+}
+
+.nav {
+    background-color: #343434;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.menu {
+    background-color: inherit;
+}
+
+.menu li {
+    cursor: pointer;
+    background-color: inherit;
+}
+
+.menu > li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.menu > li:hover {
+    background-color: #505050;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.menu .sub-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    background-color: #3d3d3d;
+    width: 150px;
+
+}
+
+.menu .sub-menu > li {
+    padding: 4px 8px;
+}
+
+.menu .sub-menu > a {
+    text-transform: unset;
+    /*??????????????????????????????????????????????????????????????????????????*/
+}
+
+.menu .sub-menu > li:hover {
+    background-color: #343434;
+}
+
+.menu .sub-menu-trigger {
+    position: relative;
+}
+
+.content {
+    min-height: calc(100vh - 114px);
+    background-color: #4e4e4e;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 40px 120px 40px 40px;
+}
+
+.grid-item {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+.masonry { /* Masonry container */
+    column-count: 4;
+    column-gap: 1em;
+    padding: 20px;
+}
+
+.imagebox {
+  background: black;
+  margin: 10px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.imagebox img {
+  opacity: 1;
+  transition: 0.5s opacity;
+
+}
+
+.imagebox .imagebox-desc {
+  background-color: rgba(0, 0, 0, 0.6);
+  bottom: 0;
+  color: white;
+  font-size: 1.2em;
+  left: 0;
+  padding: 10px 15px;
+  position: absolute;
+  transition: 0.5s padding;
+  text-align: center;
+  width: 100%;
+}
+
+.imagebox:hover img {
+  opacity: 0.7;
+}
+
+.imagebox:hover .imagebox-desc {
+  padding-bottom: 10%;
+}
+/*---------------------------
+ end of masonry layout - catalog*/
